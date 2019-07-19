@@ -1,0 +1,1066 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.trialversionofsocials">
+  <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".afterlogin"></activity>
+        <activity
+            android:name=".displaydetails"
+            android:label="@string/title_activity_displaydetails"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".signinactivity"
+            android:label="@string/title_activity_signinactivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>
+build.gradle(Project)
+buildscript {
+    repositories {
+        jcenter()
+        google()
+        mavenCentral()
+        maven {
+            url "https://google.maven.com"
+        }}
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.3.2'
+    }}
+allprojects {
+    repositories {
+        jcenter()
+        google()
+    }}
+
+
+
+
+
+Build.gradle(app)
+apply plugin: 'com.android.application'
+android {
+compileSdkVersion 26
+defaultConfig {
+        applicationId "com.example.androidattendancesystem"
+        minSdkVersion 14
+        targetSdkVersion 26
+    }
+ buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }}}
+dependencies {
+     implementation 'com.android.support:support-v4:26.1.0'
+}
+Activity_main.xml
+RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/clg"
+    tools:context=".MainActivity" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="78dp"
+        android:layout_marginTop="86dp"
+        android:text="WEL-COME"
+        android:textColor="#ffff00"
+        android:textStyle="italic"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+     <Button
+        android:id="@+id/buttonstart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/roundedbutton"
+        android:text="Start" />
+   </RelativeLayout>
+Project.xml
+<component name="ProjectCodeStyleConfiguration">
+  <code_scheme name="Project" version="173">
+    <Objective-C-extensions>
+      <file>
+        <option name="com.jetbrains.cidr.lang.util.OCDeclarationKind" value="Import" />
+        <option name="com.jetbrains.cidr.lang.util.OCDeclarationKind" value="Macro" />
+        <option name="com.jetbrains.cidr.lang.util.OCDeclarationKind" value="Typedef" />
+        <option name="com.jetbrains.cidr.lang.util.OCDeclarationKind" value="Enum" />
+        <optionname="com.jetbrains.cidr.lang.util.OCDeclarationKind" value="Constant" />
+        <optionname="com.jetbrains.cidr.lang.util.OCDeclarationKind" value="Global" />
+        <optionname="com.jetbrains.cidr.lang.util.OCDeclarationKind" value="Struct" />
+       <optionname="com.jetbrains.cidr.lang.util.OCDeclarationKind"value="FunctionPredecl"                 <optionname="com.jetbrains.cidr.lang.util.OCDeclarationKind" value="Function" />
+      </file>
+      <class>
+        <optionname="com.jetbrains.cidr.lang.util.OCDeclarationKind" value="Property" />
+        <optionname="com.jetbrains.cidr.lang.util.OCDeclarationKind" value="Synthesize" />
+        <optionname="com.jetbrains.cidr.lang.util.OCDeclarationKind" value="InitMethod" />
+        <optionname="com.jetbrains.cidr.lang.util.OCDeclarationKind" value="StaticMethod" />
+        <optionname="com.jetbrains.cidr.lang.util.OCDeclarationKind" value="InstanceMethod" />
+        <optionname="com.jetbrains.cidr.lang.util.OCDeclarationKind" value="DeallocMethod" />
+      </class>
+      <extensions>
+        <pair source="cpp" header="h" fileNamingConvention="NONE" />
+        <pair source="c" header="h" fileNamingConvention="NONE" />
+      </extensions>
+    </Objective-C-extensions>
+  </code_scheme>
+</component>
+
+
+
+
+
+Gradle.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <compositeConfiguration>
+          <compositeBuild compositeDefinitionSource="SCRIPT" />
+        </compositeConfiguration>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/app" />
+          </set>
+        </option>
+        <option name="resolveModulePerSourceSet" value="false" />
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>
+
+Misc.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
+
+Modules.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <modulefileurl="file://$PROJECT_DIR$/Android-Attendance-App-master.iml" filepath="$PROJECT_DIR$/Android-Attendance-App-master.iml" />
+      <modulefileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+    </modules>
+  </component>
+</project>
+
+Runconfigurations.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="RunConfigurationProducerService">
+    <option name="ignoredProducers">
+      <set> <optionvalue="org.jetbrains.plugins.gradle.execution.test.runner.AllInPackageGradleConfigurationProducer"/> <optionvalue="org.jetbrains.plugins.gradle.execution.test.runner.TestClassGradleConfigurationProducer"/> <optionvalue="org.jetbrains.plugins.gradle.execution.test.runner.TestMethodGradleConfigurationProducer" />
+      </set>
+    </option>
+  </component>
+</project>
+
+MainActivity.java
+package com.android.attendance.activity;
+import java.util.ArrayList;
+import com.android.attendance.bean.AttendanceBean;
+import com.android.attendance.context.ApplicationContext;
+import com.android.attendance.db.DBAdapter;
+import com.example.androidattendancesystem.R;
+import android.os.Bundle;
+import android.app.Activity;
+import android.content.Intent;
+import android.view.Menu;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+public class MenuActivity extends Activity {
+   Button addStudent;
+   Button addFaculty;
+   Button viewStudent;
+   Button viewFaculty;
+   Button logout;
+   Button attendancePerStudent;
+   @Override
+   protected void onCreate(Bundle savedInstanceState) {
+      super.onCreate(savedInstanceState);
+      setContentView(R.layout.menu);
+      addStudent =(Button)findViewById(R.id.buttonaddstudent);
+      addFaculty =(Button)findViewById(R.id.buttonaddfaculty);
+      viewStudent =(Button)findViewById(R.id.buttonViewstudent);
+      viewFaculty =(Button)findViewById(R.id.buttonviewfaculty);
+      logout =(Button)findViewById(R.id.buttonlogout);
+       addStudent.setOnClickListener(new OnClickListener() {
+        @Override
+         public void onClick(View v) {
+      Intent intent =new Intent(MenuActivity.this,AddStudentActivity.class);
+            startActivity(intent);
+         } });
+   
+LoginActivity.java
+package com.android.attendance.activity;
+import android.app.Activity;
+import android.content.Intent;
+import android.graphics.Color;
+import android.os.Bundle;
+import android.text.TextUtils;
+import android.view.Menu;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemSelectedListener;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Spinner;
+import android.widget.TextView;
+import android.widget.Toast;
+import com.android.attendance.bean.FacultyBean;
+import com.android.attendance.context.ApplicationContext;
+import com.android.attendance.db.DBAdapter;
+import com.example.androidattendancesystem.R;
+public class LoginActivity extends Activity {
+   Button login;
+   EditText username,password;
+   Spinner spinnerloginas;
+   String userrole;
+   private String[] userRoleString = new String[] { "admin", "faculty"};
+   @Override
+   protected void onCreate(Bundle savedInstanceState) {
+      super.onCreate(savedInstanceState);
+      setContentView(R.layout.login);
+      login =(Button)findViewById(R.id.buttonlogin);
+      username=(EditText)findViewById(R.id.editTextusername);
+      password=(EditText)findViewById(R.id.editTextpassword);
+      spinnerloginas=(Spinner)findViewById(R.id.spinnerloginas);
+      spinnerloginas.setOnItemSelectedListener(new OnItemSelectedListener() {
+         @Override
+         public void onItemSelected(AdapterView<?> arg0, View view,
+               int arg2, long arg3) {
+            ((TextView) arg0.getChildAt(0)).setTextColor(Color.WHITE);
+            userrole =(String) spinnerloginas.getSelectedItem(); }
+       @Override
+         public void onNothingSelected(AdapterView<?> arg0) {
+            // TODO Auto-generated method stub
+         }
+      });
+      ArrayAdapter<String> adapter_role = new ArrayAdapter<String>(this,
+      android.R.layout.simple_spinner_item, userRoleString);
+    adapterrol.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+      spinnerloginas.setAdapter(adapter_role);
+       login.setOnClickListener(new OnClickListener() {
+        @Override
+         public void onClick(View v) {
+            // TODO Auto-generated method stub
+            if(userrole.equals("admin"))
+            { String user_name = username.getText().toString();
+               String pass_word = password.getText().toString();
+             if (TextUtils.isEmpty(user_name)) 
+               {
+                  username.setError("Invalid User Name");
+               }
+               else if(TextUtils.isEmpty(pass_word))
+               {
+                  password.setError("enter password");
+               }
+               else
+               {
+                  if(user_name.equals("admin") & pass_word.equals("admin123")){
+                  Intent intent =new Intent(LoginActivity.this,MenuActivity.class);
+                  startActivity(intent);                                 Toast.makeText(getApplicationContext(),"Loginsuccessful",Toast.LENGTH_SHORT).show(); }
+else{
+ Toast.makeText(getApplicationContext(), "Login failed", Toast.LENGTH_SHORT).show();
+                 }}}
+    else
+            {
+               String user_name = username.getText().toString();
+               String pass_word = password.getText().toString();
+               if (TextUtils.isEmpty(user_name)) 
+               {
+                  username.setError("Invalid User Name");
+               }
+               else if(TextUtils.isEmpty(pass_word))
+               {
+                  password.setError("enter password");
+               }
+               DBAdapter dbAdapter = new DBAdapter(LoginActivity.this);
+               FacultyBean facultyBean = dbAdapter.validateFaculty(user_name, pass_word);
+              
+               if(facultyBean!=null)
+               {
+                  Intentintent = new Intent(LoginActivity.this,AddAttandanceSessionActivity.class);
+                  startActivity(intent);
+((ApplicationContext)LoginActivity.this.getApplicationContext()).setFacultyBean(facultyBean);
+  Toast.makeText(getApplicationContext(),"Loginsuccessful",Toast.LENGTH_SHORT).show();}else
+{ Toast.makeText(getApplicationContext(), "Login failed", Toast.LENGTH_SHORT).show();
+   }}  }
+      });}
+   @Override
+   public boolean onCreateOptionsMenu(Menu menu) {
+      getMenuInflater().inflate(R.menu.main, menu);
+      return true;
+   }}
+
+MenuActivity.java
+package com.android.attendance.activity;
+import java.util.ArrayList;
+import com.android.attendance.bean.AttendanceBean;
+import com.android.attendance.context.ApplicationContext;
+import com.android.attendance.db.DBAdapter;
+import com.example.androidattendancesystem.R;
+import android.os.Bundle;
+import android.app.Activity;
+import android.content.Intent;
+import android.view.Menu;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+public class MenuActivity extends Activity {
+   Button addStudent;
+   Button addFaculty;
+   Button viewStudent;
+   Button viewFaculty;
+   Button logout;
+   Button attendancePerStudent;
+   @Override
+   protected void onCreate(Bundle savedInstanceState) {
+      super.onCreate(savedInstanceState);
+      setContentView(R.layout.menu);
+      addStudent =(Button)findViewById(R.id.buttonaddstudent);
+      addFaculty =(Button)findViewById(R.id.buttonaddfaculty);
+      viewStudent =(Button)findViewById(R.id.buttonViewstudent);
+      viewFaculty =(Button)findViewById(R.id.buttonviewfaculty);
+      logout =(Button)findViewById(R.id.buttonlogout);
+      addStudent.setOnClickListener(new OnClickListener() {
+         @Override
+         public void onClick(View v) {
+            // TODO Auto-generated method stub
+        Intentintent=newIntent(MenuActivity.this,AddStudentActivity.class);
+        startActivity(intent);
+         } });
+       addFaculty.setOnClickListener(new OnClickListener() {
+         @Override
+         public void onClick(View v) {
+            // TODO Auto-generated method stub
+      Intent intent =new Intent(MenuActivity.this,AddFacultyActivity.class);
+            startActivity(intent); }
+      });
+     viewFaculty.setOnClickListener(new OnClickListener() {
+        @Override
+         public void onClick(View v) {
+            // TODO Auto-generated method stub
+ Intent intent =new Intent(MenuActivity.this,ViewFacultyActivity.class);
+            startActivity(intent);
+         }
+      });
+      viewStudent.setOnClickListener(new OnClickListener() {
+       @Override
+       public void onClick(View v) {
+            // TODO Auto-generated method stub
+     Intent intent =new Intent(MenuActivity.this,ViewStudentActivity.class);
+            startActivity(intent);
+         }});
+      logout.setOnClickListener(new OnClickListener() {
+       @Override
+         public void onClick(View v) {
+            // TODO Auto-generated method stub
+       Intent intent =new Intent(MenuActivity.this,MainActivity.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(intent);
+         }});
+attendancePerStudent=(Button)findViewById(R.id.attendancePerStudentButton);
+      attendancePerStudent.setOnClickListener(new OnClickListener() {
+       @Override
+         public void onClick(View arg0) {
+       DBAdapter dbAdapter = new DBAdapter(MenuActivity.this); ArrayList<AttendanceBean>attendanceBeanList=dbAdapter.getAllAttendanceByStudent();         ((ApplicationContext)MenuActivity.this.getApplicationContext()).setAttendanceBeanList(attendanceBeanList); Intentintent=newIntent(MenuActivity.this,ViewAttendancePerStudentActivity.class);
+ startActivity(intent);}
+ });
+
+
+
+AddFaculty.java
+package com.android.attendance.activity;
+import com.android.attendance.bean.FacultyBean;
+import com.android.attendance.db.DBAdapter;
+import com.example.androidattendancesystem.R;
+import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.text.TextUtils;
+import android.view.Menu;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Spinner;
+import android.widget.Toast;
+public class AddFacultyActivity extends Activity {
+   Button registerButton;
+   EditText textFirstName;
+   EditText textLastName;
+   EditText textemail;
+   EditText textcontact;
+   EditText textaddress;
+   EditText textusername;
+   EditText textpassword;
+   @Override
+   protected void onCreate(Bundle savedInstanceState) {
+      super.onCreate(savedInstanceState);
+      setContentView(R.layout.addfaculty);
+      textFirstName=(EditText)findViewById(R.id.editTextFirstName);
+      textLastName=(EditText)findViewById(R.id.editTextLastName);
+      textcontact=(EditText)findViewById(R.id.editTextPhone);
+      textaddress=(EditText)findViewById(R.id.editTextaddr);
+      textusername=(EditText)findViewById(R.id.editTextUserName);
+      textpassword=(EditText)findViewById(R.id.editTextPassword);
+      registerButton=(Button)findViewById(R.id.RegisterButton);
+      registerButton.setOnClickListener(new OnClickListener() {
+         @Override
+         public void onClick(View v) {
+            // TODO Auto-generated method stub
+            String first_name = textFirstName.getText().toString();
+            String last_name = textLastName.getText().toString();
+            String phone_no = textcontact.getText().toString();
+            String address = textaddress.getText().toString();
+            String userName = textusername.getText().toString();
+            String passWord = textpassword.getText().toString();
+            if (TextUtils.isEmpty(first_name)) {
+               textFirstName.setError("please enter firstname");
+            }
+            else if (TextUtils.isEmpty(last_name)) {
+               textLastName.setError("please enter lastname");
+            }
+            else if (TextUtils.isEmpty(phone_no)) {
+               textcontact.setError("please enter phoneno");
+            }
+            else if (TextUtils.isEmpty(address)) {
+               textaddress.setError("enter address");
+            }  
+            else if (TextUtils.isEmpty(userName)) {
+               textcontact.setError("please enter username");
+            }
+            else if (TextUtils.isEmpty(passWord)) {
+               textaddress.setError("enter password");
+            }           
+            else { 
+               FacultyBean facultyBean = new FacultyBean();
+               facultyBean.setFaculty_firstname(first_name);
+               facultyBean.setFaculty_lastname(last_name);
+               facultyBean.setFaculty_mobilenumber(phone_no);
+               facultyBean.setFaculty_address(address);
+               facultyBean.setFaculty_username(userName);
+               facultyBean.setFaculty_password(passWord);
+               DBAdapter dbAdapter = new DBAdapter(AddFacultyActivity.this);
+               dbAdapter.addFaculty(facultyBean);
+               Intent intent =new Intent(AddFacultyActivity.this,MenuActivity.class);
+               startActivity(intent);
+               Toast.makeText(getApplicationContext(),"Facultyaddedsuccessfully",   Toast.LENGTH_SHORT).show();}}    });
+
+AddStudent.java
+package com.android.attendance.activity;
+import com.android.attendance.bean.StudentBean;
+import com.android.attendance.db.DBAdapter;
+import com.example.androidattendancesystem.R;
+import android.app.Activity;
+import android.content.Intent;
+import android.graphics.Color;
+import android.os.Bundle;
+import android.text.TextUtils;
+import android.view.Menu;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemSelectedListener;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Spinner;
+import android.widget.TextView;
+import android.widget.Toast;
+public class AddStudentActivity extends Activity {
+   Button registerButton;
+   EditText textFirstName;
+   EditText textLastName;
+   EditText textcontact;
+   EditText textaddress;
+   Spinner spinnerbranch,spinneryear;
+   String userrole,branch,year;
+   private String[] branchString = new String[] { "ise"};
+   private String[] yearString = new String[] {"SE","TE","FE"};
+   @Override
+   protected void onCreate(Bundle savedInstanceState) {
+      super.onCreate(savedInstanceState);
+      setContentView(R.layout.addstudent);
+      spinnerbranch=(Spinner)findViewById(R.id.spinnerdept);
+      spinneryear=(Spinner)findViewById(R.id.spinneryear);
+      textFirstName=(EditText)findViewById(R.id.editTextFirstName);
+      textLastName=(EditText)findViewById(R.id.editTextLastName);
+      textcontact=(EditText)findViewById(R.id.editTextPhone);
+      textaddress=(EditText)findViewById(R.id.editTextaddr);
+      registerButton=(Button)findViewById(R.id.RegisterButton);
+      spinnerbranch.setOnItemSelectedListener(new OnItemSelectedListener() {
+         @Override
+         public void onItemSelected(AdapterView<?> arg0, View,
+               int arg2, long arg3) {
+            // TODO Auto-generated method stub
+            ((TextView) arg0.getChildAt(0)).setTextColor(Color.WHITE);
+            branch =(String) spinnerbranch.getSelectedItem();
+         }
+         @Override
+         public void onNothingSelected(AdapterView<?> arg0) {
+            // TODO Auto-generated method stub
+         } });
+      ArrayAdapter<String> adapter_branch = new ArrayAdapter<String>(this,
+            android.R.layout.simple_spinner_item, branchString);
+      adapter_branch
+      .setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+      spinnerbranch.setAdapter(adapter_branch);
+      spinneryear.setOnItemSelectedListener(new OnItemSelectedListener() {
+         @Override
+         public void onItemSelected(AdapterView<?> arg0, View,
+               int arg2, long arg3) {
+            // TODO Auto-generated method stub
+            ((TextView) arg0.getChildAt(0)).setTextColor(Color.WHITE);
+            year =(String) spinneryear.getSelectedItem();
+         }
+         @Override
+         public void onNothingSelected(AdapterView<?> arg0) {
+            // TODO Auto-generated method stub
+         }});
+      ArrayAdapter<String> adapter_year = new ArrayAdapter<String>(this,
+            android.R.layout.simple_spinner_item, yearString)_adapter_year
+      .setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+      spinneryear.setAdapter(adapter_year);
+      registerButton.setOnClickListener(new OnClickListener() {
+         @Override
+         public void onClick(View v) {
+            // TODO Auto-generated method stub
+            //......................................validation
+            String first_name = textFirstName.getText().toString();
+            String last_name = textLastName.getText().toString();
+            String phone_no = textcontact.getText().toString();
+            String address = textaddress.getText().toString();
+            if (TextUtils.isEmpty(first_name)) {
+               textFirstName.setError("please enter firstname");
+            }
+            else if (TextUtils.isEmpty(last_name)) {
+               textLastName.setError("please enter lastname");
+            }
+            else if (TextUtils.isEmpty(phone_no)) {
+               textcontact.setError("please enter phoneno");
+            }
+            else if (TextUtils.isEmpty(address)) {
+               textaddress.setError("enter address");
+            }           
+            else { 
+             StudentBean = new StudentBean();
+               studentBean.setStudent_firstname(first_name);
+               studentBean.setStudent_lastname(last_name);
+               studentBean.setStudent_mobilenumber(phone_no);
+               studentBean.setStudent_address(address);
+               studentBean.setStudent_department(branch);
+               studentBean.setStudent_class(year);
+                DBAdapter dbAdapter= new DBAdapter(AddStudentActivity.this);
+               dbAdapter.addStudent(studentBean);
+              Intent =new Intent(AddStudentActivity.this,MenuActivity.class);
+               startActivity(intent);
+               Toast.makeText(getApplicationContext(), "student added successfully",    Toast.LENGTH_SHORT).show();
+ }}});}
+   @Override
+   public boolean onCreateOptionsMenu(Menu menu) {
+      // Inflate the menu; this adds items to the action bar if it is present.
+      getMenuInflater().inflate(R.menu.main, menu);
+      return true;
+   }}
+ 
+Addattendancesessionacitivity.java
+package com.android.attendance.activity;
+import java.util.ArrayList;
+import java.util.Calendar;
+import com.android.attendance.bean.AttendanceBean;
+import com.android.attendance.bean.AttendanceSessionBean;
+import com.android.attendance.bean.FacultyBean;
+import com.android.attendance.bean.StudentBean;
+import com.android.attendance.context.ApplicationContext;
+import com.android.attendance.db.DBAdapter;
+import com.example.androidattendancesystem.R;
+import android.app.Activity;
+import android.app.DatePickerDialog;
+import android.app.Dialog;
+import android.content.Intent;
+import android.graphics.Color;
+import android.os.Bundle;
+import android.text.TextUtils;
+import android.view.Menu;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemSelectedListener;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.DatePicker;
+import android.widget.EditText;
+import android.widget.ImageButton;
+import android.widget.Spinner;
+import android.widget.TextView;
+import android.widget.Toast;
+public class AddAttandanceSessionActivity<AddAttandanceActivity> extends Activity {
+   private ImageButton date;
+   private Calendar cal;
+   private int day;
+   private int month;
+   private int dyear;
+   private EditText dateEditText;
+   Button submit;
+   Button viewAttendance;
+   Button viewTotalAttendance;
+   Spinner spinnerbranch,spinneryear,spinnerSubject;
+   String branch = "cse";
+   String year = "SE";
+   String subject = "SC";
+   private String[] branchString = new String[] { "cse"};
+   private String[] yearString = new String[] {"SE","TE","BE"};
+   private String[] subjectSEString = new String[] {"SC","MC"};
+   private String[] subjectTEString = new String[] {"GT","CN"};
+   private String[] subjectBEString = new String[] {"DS","NS"};
+   private String[] subjectFinal = new String[] {"M3","DS","M4","CN","M5","NS"};
+   AttendanceSessionBean attendanceSessionBean;
+   @Override
+   protected void onCreate(Bundle savedInstanceState) {
+      super.onCreate(savedInstanceState);
+      setContentView(R.layout.add_attandance);
+      spinnerbranch=(Spinner)findViewById(R.id.spinner1);
+      spinneryear=(Spinner)findViewById(R.id.spinneryear);
+      spinnerSubject=(Spinner)findViewById(R.id.spinnerSE);
+ArrayAdapter<String>adapter_branch=newArrayAdapter<String>(this,android.R.layout.simple_spinner_item, branchString);
+adapter_branch.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+      spinnerbranch.setAdapter(adapter_branch);
+      spinnerbranch.setOnItemSelectedListener(new OnItemSelectedListener() {
+         @Override
+         public void onItemSelected(AdapterView<?> arg0, View view,
+               int arg2, long arg3) {
+            // TODO Auto-generated method stub
+            ((TextView) arg0.getChildAt(0)).setTextColor(Color.WHITE);
+            branch =(String) spinnerbranch.getSelectedItem();
+         }
+         @Override
+         public void onNothingSelected(AdapterView<?> arg0) {
+            // TODO Auto-generated method stub
+         }});
+      ///......................spinner2
+      ArrayAdapter<String> adapter_year = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item,yearString); adapter_year.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item); spinneryear.setAdapter(adapter_year);
+      spinneryear.setOnItemSelectedListener(new OnItemSelectedListener() {
+         @Override
+         public void onItemSelected(AdapterView<?> arg0, View view,
+               int arg2, long arg3) {
+            // TODO Auto-generated method stub
+            ((TextView) arg0.getChildAt(0)).setTextColor(Color.WHITE);
+            year =(String) spinneryear.getSelectedItem();
+        Toast.makeText(getApplicationContext(),"year:"+year,Toast.LENGTH_SHORT).show();
+         @Override
+         public void onNothingSelected(AdapterView<?> arg0) {
+            // TODO Auto-generated method stub
+         }  });
+ ArrayAdapter<String> adapter_subject = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, subjectFinal);
+adapter_subject.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+      spinnerSubject.setAdapter(adapter_subject);
+      spinnerSubject.setOnItemSelectedListener(new OnItemSelectedListener() {
+         @Override
+         public void onItemSelected(AdapterView<?> arg0, View view,
+               int arg2, long arg3) {
+            // TODO Auto-generated method stub
+            ((TextView) arg0.getChildAt(0)).setTextColor(Color.WHITE);
+            subject =(String) spinnerSubject.getSelectedItem();
+         }
+         @Override
+         public void onNothingSelected(AdapterView<?> arg0) {
+            // TODO Auto-generated method stub
+         }  });
+      date = (ImageButton) findViewById(R.id.DateImageButton);
+      cal = Calendar.getInstance();
+      day = cal.get(Calendar.DAY_OF_MONTH);
+      month = cal.get(Calendar.MONTH);
+      dyear = cal.get(Calendar.YEAR);
+      dateEditText = (EditText) findViewById(R.id.DateEditText);
+      date.setOnClickListener(new OnClickListener() {
+      @Override
+         public void onClick(View arg0) {
+            showDialog(0);
+        }
+      });
+       submit=(Button)findViewById(R.id.buttonsubmit);
+      submit.setOnClickListener(new OnClickListener() {
+         @Override
+         public void onClick(View arg0) {
+            AttendanceSessionBean attendanceSessionBean = new AttendanceSessionBean();          FacultyBeanbean=((ApplicationContext)AddAttandanceSessionActivity.this.getApplicationContext()).getFacultyBean();
+            attendanceSessionBean.setAttendance_session_faculty_id(bean.getFaculty_id());
+            attendanceSessionBean.setAttendance_session_department(branch);
+            attendanceSessionBean.setAttendance_session_class(year);
+                attendanceSessionBean.setAttendance_session_date(dateEditText.getText().toString());
+ attendanceSessionBean.setAttendance_session_subject(subject);
+ DBAdapter dbAdapter = new DBAdapter(AddAttandanceSessionActivity.this);
+ int sessionId= dbAdapter.addAttendanceSession(attendanceSessionBean);
+ ArrayList<StudentBean>studentBeanList=dbAdapter.getAllStudentByBranchYear(branch, year); ((ApplicationContext)AddAttandanceSessionActivity.this.getApplicationContext()).setStudentBeanList(studentBeanList);
+   Intentintent= new Intent(AddAttandanceSessionActivity.this,AddAttendanceActivity.class);
+   intent.putExtra("sessionId", sessionId);
+   startActivity(intent);
+  }    });
+   viewAttendance=(Button)findViewById(R.id.viewAttendancebutton);
+   viewAttendance.setOnClickListener(new OnClickListener() {       
+         @Override
+         public void onClick(View arg0) {
+            AttendanceSessionBean attendanceSessionBean = new AttendanceSessionBean(); FacultyBeanbean=((ApplicationContext)AddAttandanceSessionActivity.this.getApplicationContext()).getFacultyBean();  attendanceSessionBean.setAttendance_session_faculty_id(bean.getFaculty_id());
+attendanceSessionBean.setAttendance_session_department(branch) attendanceSessionBean.setAttendance_session_class(year); attendanceSessionBean.setAttendance_session_date(dateEditText.getText().toString());
+attendanceSessionBean.setAttendance_session_subject(subject);
+DBAdapter dbAdapter = new DBAdapter(AddAttandanceSessionActivity.this);
+ArrayList<AttendanceBean>attendanceBeanList=dbAdapter.getAttendanceBySessionID(attendanceSessionBean); ((ApplicationContext)AddAttandanceSessionActivity.this.getApplicationContext()).setAttendanceBeanList(attendanceBeanList);
+             Intentintent=newIntent(AddAttandanceSessionActivity.this,ViewAttendanceByFacultyActivity.class);
+            startActivity(intent);
+        }  });
+   viewTotalAttendance=(Button)findViewById(R.id.viewTotalAttendanceButton);
+  viewTotalAttendance.setOnClickListener(new OnClickListener() {
+       @Override
+         public void onClick(View arg0) {
+            AttendanceSessionBean attendanceSessionBean = new AttendanceSessionBean();
+            FacultyBean bean=((ApplicationContext)AddAttandanceSessionActivity.this.getApplicationContext()).getFacultyBean();
+            attendanceSessionBean.setAttendance_session_faculty_id(bean.getFaculty_id());
+            attendanceSessionBean.setAttendance_session_department(branch);
+            attendanceSessionBean.setAttendance_session_class(year);
+            attendanceSessionBean.setAttendance_session_subject(subject);
+            DBAdapter dbAdapter = new DBAdapter(AddAttandanceSessionActivity.this); ArrayList<AttendanceBean>attendanceBeanList=dbAdapter.getTotalAttendanceBySessionID(attendanceSessionBean);
+((ApplicationContext)AddAttandanceSessionActivity.this.getApplicationContext()).setAttendanceBeanList(attendanceBeanList); Intentintent=newIntent(AddAttandanceSessionActivity.this,ViewAttendanceByFacultyActivity.class);
+startActivity(intent);            
+         }    }); }
+   @Override
+   @Deprecated
+   protected Dialog onCreateDialog(int id) {
+      return new DatePickerDialog(this, datePickerListener, dyear, month, day);
+   }
+   privateDatePickerDialog.OnDateSetListenerdatePickerListener=new DatePickerDialog.OnDateSetListener() {
+      public void onDateSet(DatePicker view, int selectedYear,
+            int selectedMonth, int selectedDay) {
+         dateEditText.setText(selectedDay + " / " + (selectedMonth + 1) + " / "
+               + selectedYear);
+      }
+   };
+
+AddAttendanceActivity.java
+package com.android.attendance.activity;
+import java.util.ArrayList;
+import android.app.Activity;
+import android.app.Dialog;
+import android.graphics.Color;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.Menu;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.Window;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.ListView;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.RadioGroup.OnCheckedChangeListener;
+import com.android.attendance.bean.AttendanceBean;
+import com.android.attendance.bean.StudentBean;
+import com.android.attendance.context.ApplicationContext;
+import com.android.attendance.db.DBAdapter;
+import com.example.androidattendancesystem.R;
+public class AddAttendanceActivity extends Activity {
+   ArrayList<StudentBean> studentBeanList;
+   private ListView listView ;  
+   private ArrayAdapter<String> listAdapter;
+   int sessionId=0;
+   String status="P";
+   Button attendanceSubmit;
+   DBAdapter dbAdapter = new DBAdapter(this);
+   @Override
+   protected void onCreate(Bundle savedInstanceState) {
+      super.onCreate(savedInstanceState);
+      setContentView(R.layout.__listview_main);
+      sessionId = getIntent().getExtras().getInt("sessionId");
+      listView=(ListView)findViewById(R.id.listview);
+      final ArrayList<String> studentList = new ArrayList<String>();
+studentBeanList=((ApplicationContext)AddAttendanceActivity.this.getApplicationContext()).getStudentBeanList();
+      for(StudentBean studentBean : studentBeanList)
+    { Stringusers=studentBean.getStudent_firstname()+","+studentBean.getStudent_lastname();
+         studentList.add(users);
+         Log.d("users: ", users); 
+      }listAdapter = new ArrayAdapter<String>(this, R.layout.add_student_attendance, R.id.labelA, studentList);
+      listView.setAdapter( listAdapter ); 
+      listView.setOnItemClickListener(new OnItemClickListener() {
+         @Override
+         public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
+               long arg3) {
+            arg0.getChildAt(arg2).setBackgroundColor(Color.TRANSPARENT);
+            //arg0.setBackgroundColor(234567);
+            arg1.setBackgroundColor(334455);
+            final StudentBean studentBean = studentBeanList.get(arg2);
+            final Dialog dialog = new Dialog(AddAttendanceActivity.this);
+            dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);//...........
+            dialog.setContentView(R.layout.test_layout);
+            // set title and cancelable
+            RadioGroup radioGroup;
+            RadioButton present;
+            RadioButton absent;
+            radioGroup = (RadioGroup) dialog.findViewById(R.id.radioGroup);
+            present=(RadioButton)dialog.findViewById(R.id.PresentradioButton);
+            absent=(RadioButton)dialog.findViewById(R.id.AbsentradioButton);
+            radioGroup.setOnCheckedChangeListener(new OnCheckedChangeListener() {
+               @Override
+               public void onCheckedChanged(RadioGroup group, int checkedId) {
+                  if(checkedId == R.id.PresentradioButton) {
+                     status = "P";
+                  } else if(checkedId == R.id.AbsentradioButton) {
+                     status = "A";
+                  } else {
+                  }
+               }
+            });
+
+            attendanceSubmit = (Button)dialog.findViewById(R.id.attendanceSubmitButton);
+            attendanceSubmit.setOnClickListener(new OnClickListener() {
+               @Override
+               public void onClick(View arg0) {
+                  AttendanceBean attendanceBean = new AttendanceBean();
+                  attendanceBean.setAttendance_session_id(sessionId);
+                  attendanceBean.setAttendance_student_id(studentBean.getStudent_id());
+                  attendanceBean.setAttendance_status(status);
+                  DBAdapter dbAdapter = new DBAdapter(AddAttendanceActivity.this);
+                  dbAdapter.addNewAttendance(attendanceBean); 
+                  dialog.dismiss();
+               }
+          }};
+            dialog.setCancelable(true);
+            dialog.show();
+   }});}
+   @Override
+   public boolean onCreateOptionsMenu(Menu menu) {
+      // Inflate the menu; this adds items to the action bar if it is present.
+      getMenuInflater().inflate(R.menu.main, menu);
+      return true;
+}}
+
+
+
+
+
+
+ViewAttendanceactivity.java
+package com.android.attendance.activity;
+import com.example.androidattendancesystem.R;
+import android.os.Bundle;
+import android.app.Activity;
+import android.content.Intent;
+import android.graphics.Color;
+import android.view.Menu;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.Spinner;
+import android.widget.TextView;
+import android.widget.AdapterView.OnItemSelectedListener;
+public class ViewAttandanceActivity extends Activity {
+   Spinner spinnerbranch,spinneryear;
+   String userrole,branch,year;
+   private String[] branchString = new String[] { "cse"};
+   private String[] yearString = new String[] {"SE","TE","BE"};
+   @Override
+   protected void onCreate(Bundle savedInstanceState) {
+      super.onCreate(savedInstanceState);
+      setContentView(R.layout.viewstudent);
+      spinnerbranch=(Spinner)findViewById(R.id.spinnerbranchView);
+      spinneryear=(Spinner)findViewById(R.id.spinneryearView);
+      spinnerbranch.setOnItemSelectedListener(new OnItemSelectedListener() {
+         @Override
+         public void onItemSelected(AdapterView<?> arg0, View view,
+               int arg2, long arg3) {
+            // TODO Auto-generated method stub
+            ((TextView) arg0.getChildAt(0)).setTextColor(Color.WHITE);
+            branch =(String) spinnerbranch.getSelectedItem();
+         }
+         @Override
+         public void onNothingSelected(AdapterView<?> arg0) {
+            // TODO Auto-generated method stub
+         }
+      });
+      ArrayAdapter<String> adapter_branch = new ArrayAdapter<String>(this,
+            android.R.layout.simple_spinner_item, branchString);
+      adapter_branch
+      .setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+      spinnerbranch.setAdapter(adapter_branch);
+      ///......................spinner2
+      spinneryear.setOnItemSelectedListener(new OnItemSelectedListener() {
+         @Override
+         public void onItemSelected(AdapterView<?> arg0, View view,
+               int arg2, long arg3) {
+            // TODO Auto-generated method stub
+            ((TextView) arg0.getChildAt(0)).setTextColor(Color.WHITE);
+            year =(String) spinneryear.getSelectedItem();
+         }
+         @Override
+         public void onNothingSelected(AdapterView<?> arg0) {
+            // TODO Auto-generated method stub
+         }
+      });
+
+      ArrayAdapter<String> adapter_year = new ArrayAdapter<String>(this,
+            android.R.layout.simple_spinner_item, yearString);
+      adapter_year
+      .setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+      spinneryear.setAdapter(adapter_year);
+   }
+   @Override
+   public boolean onCreateOptionsMenu(Menu menu) {
+      // Inflate the menu; this adds items to the action bar if it is present.
+      getMenuInflater().inflate(R.menu.main, menu);
+      return true;
+   }
+}
+
+ViewAttendanceByFacultyActivity.java
+package com.android.attendance.activity;
+import java.util.ArrayList;
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.Menu;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemLongClickListener;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+import android.widget.Toast;
+import com.android.attendance.bean.AttendanceBean;
+import com.android.attendance.bean.FacultyBean;
+import com.android.attendance.bean.StudentBean;
+import com.android.attendance.context.ApplicationContext;
+import com.android.attendance.db.DBAdapter;
+import com.example.androidattendancesystem.R;
+public class ViewAttendanceByFacultyActivity extends Activity {
+   ArrayList<AttendanceBean> attendanceBeanList;
+   private ListView listView ;  
+   private ArrayAdapter<String> listAdapter;
+   DBAdapter dbAdapter = new DBAdapter(this);
+   @Override
+   protected void onCreate(Bundle savedInstanceState) {
+      super.onCreate(savedInstanceState);
+      setContentView(R.layout.__listview_main);
+      listView=(ListView)findViewById(R.id.listview);
+      final ArrayList<String> attendanceList = new ArrayList<String>();
+      attendanceList.add("Id | StudentName |  Status");
+ attendanceBeanList=((ApplicationContext)ViewAttendanceByFacultyActivity.this.getApplicationContext()).getAttendanceBeanList();
+      for(AttendanceBean attendanceBean : attendanceBeanList)
+      {
+         String users = "";
+         if(attendanceBean.getAttendance_session_id() != 0)
+         {
+            DBAdapter dbAdapter = new DBAdapter(ViewAttendanceByFacultyActivity.this); StudentBeanstudentBean=dbAdapter.getStudentById(attendanceBean.getAttendance_student_id()); users=attendanceBean.getAttendance_student_id()+""+studentBean.getStudent_firstname()+","+studentBean.getStudent_lastname()+" "+attendanceBean.getAttendance_status();
+         }
+         else
+         {
+            users = attendanceBean.getAttendance_status()}
+         attendanceList.add(users);
+         Log.d("users: ", users); 
+      }
+      listAdapter = new ArrayAdapter<String>(this, R.layout.view_attendance_list, R.id.labelAttendance, attendanceList);
+      listView.setAdapter( listAdapter ); 
+   }
+   @Override
+   public boolean onCreateOptionsMenu(Menu menu) {
+      // Inflate the menu; this adds items to the action bar if it is present.
+      getMenuInflater().inflate(R.menu.main, menu);
+      return true;
+   }
+}
+
+ViewAttendancePerStudentActivity.java
+package com.android.attendance.activity;
+import java.util.ArrayList;
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.Menu;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemLongClickListener;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+import android.widget.Toast;
+import com.android.attendance.bean.AttendanceBean;
+import com.android.attendance.bean.FacultyBean;
+import com.android.attendance.bean.StudentBean;
+import com.android.attendance.context.ApplicationContext;
+import com.android.attendance.db.DBAdapter;
+import com.example.androidattendancesystem.R;
+public class ViewAttendancePerStudentActivity extends Activity {
+ ArrayList<AttendanceBean> attendanceBeanList;
+   private ListView listView ;  
+   private ArrayAdapter<String> listAdapter;
+   DBAdapter dbAdapter = new DBAdapter(this);
+   @Override
+   protected void onCreate(Bundle savedInstanceState) {
+      super.onCreate(savedInstanceState);
+      setContentView(R.layout.__listview_main);
+ listView=(ListView)findViewById(R.id.listview);
+      final ArrayList<String> attendanceList = new ArrayList<String>();
+      attendanceList.add("Present Count Per Student");
+attendanceBeanList=((ApplicationContext)ViewAttendancePerStudentActivity.this.getApplicationContext()).getAttendanceBeanList();
+ for(AttendanceBean attendanceBean : attendanceBeanList)
+      {
+         Stringusers="”DBAdapterdbadapter=new DBAdapter(ViewAttendancePerStudentActivity.this);            StudentBeanstudentBean=dbAdapter.getStudentById(attendanceBean.getAttendance_student_id());
+users=attendanceBean.getAttendance_student_id()+"."+studentBean.getStudent_firstname()+","+studentBean.getStudent_lastname()+""+attendanceBean.getAttendance_session_id();
+            attendanceList.add(users);
+      }
+ listAdapter = new ArrayAdapter<String>(this, R.layout.view_attendance_list_per_student, R.id.labelAttendancePerStudent, attendanceList);
+      listView.setAdapter( listAdapter ); 
+   @Override
+   public boolean onCreateOptionsMenu(Menu menu) {
+      // Inflate the menu; this adds items to the action bar if it is present.
+      getMenuInflater().inflate(R.menu.main, menu);
+      return true;
+   }
+}
+
+
